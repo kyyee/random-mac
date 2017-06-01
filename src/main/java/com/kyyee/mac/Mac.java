@@ -18,12 +18,12 @@ public class Mac {
         Random random = new Random();
         // qemu下mac地址前3位固定为 52:54:00
         String[] mac = {
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff))
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff))
         };
         return String.join(SEPARATOR_OF_MAC, mac);
     }
@@ -39,12 +39,12 @@ public class Mac {
     public String randomMacWithOui(Integer[] oui) {
         Random random = new Random();
         String[] mac = {
-                Integer.toHexString(oui[0]),
-                Integer.toHexString(oui[1]),
-                Integer.toHexString(oui[2]),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff))
+                String.format("%02x", oui[0]),
+                String.format("%02x", oui[1]),
+                String.format("%02x", oui[2]),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff))
         };
         return String.join(SEPARATOR_OF_MAC, mac);
     }
@@ -59,12 +59,12 @@ public class Mac {
     public String randomMac4Qemu() {
         Random random = new Random();
         String[] mac = {
-                Integer.toHexString(0x52),
-                Integer.toHexString(0x54),
-                Integer.toHexString(0x00),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff))
+                String.format("%02x", 0x52),
+                String.format("%02x", 0x54),
+                String.format("%02x", 0x00),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff))
         };
         return String.join(SEPARATOR_OF_MAC, mac);
     }
@@ -79,12 +79,12 @@ public class Mac {
     public String randomMac4Xen() {
         Random random = new Random();
         String[] mac = {
-                Integer.toHexString(0x00),
-                Integer.toHexString(0x16),
-                Integer.toHexString(0x3e),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff))
+                String.format("%02x", 0x00),
+                String.format("%02x", 0x16),
+                String.format("%02x", 0x3e),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff))
         };
         return String.join(SEPARATOR_OF_MAC, mac);
     }
@@ -99,12 +99,12 @@ public class Mac {
     public String randomMac4Apple() {
         Random random = new Random();
         String[] mac = {
-                Integer.toHexString(0x00),
-                Integer.toHexString(0xcd),
-                Integer.toHexString(0xfe),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff))
+                String.format("%02x", 0x00),
+                String.format("%02x", 0xcd),
+                String.format("%02x", 0xfe),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff))
         };
         return String.join(SEPARATOR_OF_MAC, mac);
     }
@@ -119,12 +119,12 @@ public class Mac {
     public String randomMac4Huawei() {
         Random random = new Random();
         String[] mac = {
-                Integer.toHexString(0x48),
-                Integer.toHexString(0xad),
-                Integer.toHexString(0x08),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff)),
-                Integer.toHexString(random.nextInt(0xff))
+                String.format("%02x", 0x48),
+                String.format("%02x", 0xad),
+                String.format("%02x", 0x08),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff)),
+                String.format("%02x", random.nextInt(0xff))
         };
         return String.join(SEPARATOR_OF_MAC, mac);
     }
