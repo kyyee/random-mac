@@ -11,4 +11,6 @@ Generate a random Mac address. There are six method for you.
 
 ## Reference
 
-The OUI list is available.
+The [OUI][1] list is available.
+
+[1]:http://standards.ieee.org/regauth/oui/oui.txt
