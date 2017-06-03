@@ -16,7 +16,6 @@ public class Mac {
      */
     public String randomMac() {
         Random random = new Random();
-        // qemu下mac地址前3位固定为 52:54:00
         String[] mac = {
                 String.format("%02x", random.nextInt(0xff)),
                 String.format("%02x", random.nextInt(0xff)),
